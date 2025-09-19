@@ -32,24 +32,34 @@ git config --global user.email "youremail@example.com"
 A **repository** is a project that Git tracks. To get a local copy of our example project, use the `git clone` command. This downloads the entire project history.
 
 ```bash
-git clone https://github.com/your-username/example-repo.git
+git clone https://github.com/BluThaitanium/Git-ProjectManagement.git
 ```
 
-**Note:** Please replace `your-username/example-repo` with the actual path to your repository.
+**Note:** Please replace `BluThaitanium/Git-ProjectManagement` with the actual path to your repository.
 
 ### b. Navigate into the Directory
 
-After cloning, a new folder with the same name as the repository will be created. Use the `cd` command to enter it.
+After cloning, a new folder with the same name as the repository will be created. Use `ls` to see your current directory:
 
 ```bash
-cd example-repo
+ls
+```
+
+Then use the `cd` command to enter the new repo you cloned.
+
+```bash
+cd Git-ProjectManagement
 ```
 
 -----
 
-## 3\. Basic Git Commands
+## 3\. Getting Familiar
 
-### a. Check the Status
+Awesome! You're in a git repo. Look around! Run `ls` to see your current directory
+
+```bash
+ls
+```
 
 The `git status` command is your best friend. It shows you the current state of your working directory and staging area, indicating which files have been modified, are staged for a commit, or are untracked.
 
@@ -57,42 +67,38 @@ The `git status` command is your best friend. It shows you the current state of 
 git status
 ```
 
-### b. Make and Stage Changes
+Notice that you're on the `main` branch
 
-Open the `README.md` file in a text editor. Add a new line of text, like "Hello, Git\!" and save the file. Now, run `git status` again. You'll see that Git recognizes the change.
-
-To prepare the change for a commit, you need to **stage** it using `git add`.
-
-```bash
-git add README.md
+```
+On branch main
+Your branch is up to date with 'origin/main'.
 ```
 
-### c. Commit Changes
+## 4\. The Plan
 
-A **commit** is a snapshot of your repository at a specific point in time. It's a way of saving a group of staged changes. Use `git commit` to create one, adding a brief message with the `-m` flag to describe the changes you made.
+I want you to make your own branch. Visually it's like this:
+
+![branches](./images/branching.png)
+
+... so as an analogy your workflow will look like this:
+1. Go to Walmart (github) and you'll see Lay's chips (this repo on main branch)
+2. Buy the chips and slap on a new brand name (your branch)
+3. Add some salt into the bag of chips (making edits, git add/commit/push)
+4. Put the bag of chips back in Walmart for others to buy (making your PR and merging back to main)
+
+## 5\. Checkout
+
+So start with making the branch. I also want you to practice a common GitOps behavior you'll see at work and in Open Source.
+
+Name your branch "\<your name\>/\<what youre doing\>"
 
 ```bash
-git commit -m "Add 'Hello, Git!' to README"
+# For instance, I will make mines `git checkout -b "phuthai/GitPractice"
+git checkout -b "<branchname>"
 ```
 
-### d. Push to the Remote
-
-So far, all your changes are only on your local machine. To share them with others and update the online repository, you need to `git push`. This command uploads your commits from your local branch to the remote one.
+Now run `git status`. Make sure you see that you're on your new branch!
 
 ```bash
-git push origin main
-```
-
-**Note:** `origin` is the default name for the remote repository, and `main` is the name of the branch.
-
------
-
-## 4\. Final Review
-
-### a. Check the Log
-
-To see a history of all the commits in the repository, use `git log`. This is a great way to review past changes and understand the project's history.
-
-```bash
-git log
+git status
 ```
