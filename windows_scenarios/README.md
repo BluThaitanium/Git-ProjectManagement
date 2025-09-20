@@ -32,9 +32,15 @@ In summary, `git add ...`, `git commit ...`, `git push` with some `git status` s
 
 -----
 
-## 1\. Scenario 1
+## 1\. Scenario 1 | more add/commit/push practice
 
-Run 
+1. Go inside `Scenario1` directory and run `.\Scenario1.ps1` (note that you can tab-complete files and directories)
+
+3. Delete the "DeleteMe#.txt" files
+
+4. Only push the changes for DeleteMe1.txt and DeleteMe2.txt
+
+When you're done, run the cleanup script, `.\cleanup.ps1`
 
 -----
 
