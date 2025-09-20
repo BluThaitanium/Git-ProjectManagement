@@ -52,9 +52,9 @@ Your end goal is having DeleteMe1.txt and EditMe.txt pushed, with the other file
 
 -----
 
-## 2\. Scenario 2 | gitignores
+## 3\. Scenario 3 | gitignores
 
-1. Naviagate to the directory `Scenario2`, and run its corresonding script like you did in Scenario 1
+1. Naviagate to the directory `Scenario3`, and run its corresonding script like you did in Scenario 1
 
 Sometimes when you code, you get files you dont want to commit ever, but it's a huge hassle. For instance, building in some C# projects yields hundreds of build files that live around in directories all over your project. A `.gitignore` file will make git ignore any file from being added/committed
 
