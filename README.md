@@ -16,6 +16,10 @@ First, you'll need to install Git on your computer.
 
 ### b. Configure Git
 
+**From now on, try to use the command line instead of opening file explorer**
+
+**For macOS/Linux, open the terminal. Windows has 2 cmdlets, open POWERSHELL and not cmd**
+
 Next, set your username and email. Git attaches this information to all your commits, so it's essential for tracking who made what changes.
 
 ```bash
@@ -102,3 +106,11 @@ Now run `git status`. Make sure you see that you're on your new branch!
 ```bash
 git status
 ```
+
+## + Scenarios
+
+Now move on to the scenarios. Depending on your operating system, go inside the `windows_scenarios` (Windows)
+or `unix_scenarios` (macOS, Linux)
+
+(remember the commands `ls` and `cd` if you're navigating via the command line)
+
