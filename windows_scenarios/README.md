@@ -36,68 +36,29 @@ In summary, `git add ...`, `git commit ...`, `git push` with some `git status` s
 
 1. Go inside `Scenario1` directory and run `.\Scenario1.ps1` (note that you can tab-complete files and directories)
 
-3. Delete the "DeleteMe#.txt" files
+2. You'll see that a few files were created. Run `git status` to see them
 
-4. Only push the changes for DeleteMe1.txt and DeleteMe2.txt
+3. Add, Commit, and Push all the changes
 
-When you're done, run the cleanup script, `.\cleanup.ps1`
+Before continuing, make sure that `git status` no longer shows files in red/green
+
+1. Delete the "DeleteMe#.txt" files
+
+2. Finish the math equation in "EditMe.txt"
+
+3. Only push the changes for DeleteMe1.txt and EditMe.txt
+
+Your end goal is having DeleteMe1.txt and EditMe.txt pushed, with the other files still in red with git status. Sometimes while coding, you have changes you dont want to commit yet.
 
 -----
 
-## 3\. Getting Familiar
+## 2\. Scenario 2 | gitignores
 
-Awesome! You're in a git repo. Look around! Run `ls` to see your current directory
+1. Naviagate to the directory `Scenario2`, and run its corresonding script like you did in Scenario 1
 
-```bash
-ls
-```
+Sometimes when you code, you get files you dont want to commit ever, but it's a huge hassle. For instance, building in some C# projects yields hundreds of build files that live around in directories all over your project. A `.gitignore` file will make git ignore any file from being added/committed
 
-The `git status` command is your best friend. It shows you the current state of your working directory and staging area, indicating which files have been modified, are staged for a commit, or are untracked.
+2. Modify the `.gitignore` file to ignore all the IgnoreMe#.txt files. Your end goal is just seeing the DontIgnoreMe.txt files when you run `git status`. Feel free to use Bing or CoPilot to help you out. Bonus points if you write it in 1 line via regex.
 
-```bash
-git status
-```
-
-Notice that you're on the `main` branch
-
-```
-On branch main
-Your branch is up to date with 'origin/main'.
-```
-
-## 4\. The Plan
-
-I want you to make your own branch. Visually it's like this:
-
-![branches](./images/branching.png)
-
-... so as an analogy your workflow will look like this:
-1. Go to Walmart (github) and you'll see Lay's chips (this repo on main branch)
-2. Buy the chips and slap on a new brand name (your branch)
-3. Add some salt into the bag of chips (making edits, git add/commit/push)
-4. Put the bag of chips back in Walmart for others to buy (making your PR and merging back to main)
-
-## 5\. Checkout
-
-So start with making the branch. I also want you to practice a common GitOps behavior you'll see at work and in Open Source.
-
-Name your branch "\<your name\>/\<what youre doing\>"
-
-```bash
-# For instance, I will make mines `git checkout -b "phuthai/GitPractice"
-git checkout -b "<branchname>"
-```
-
-Now run `git status`. Make sure you see that you're on your new branch!
-
-```bash
-git status
-```
-
-## + Scenarios
-
-Now move on to the scenarios. Depending on your operating system, go inside the `windows_scenarios` (Windows)
-or `unix_scenarios` (macOS, Linux)
-
-(remember the commands `ls` and `cd` if you're navigating via the command line)
+3. If you only see the DontIgnoreMe.txt files, you can add/commit/push
 
