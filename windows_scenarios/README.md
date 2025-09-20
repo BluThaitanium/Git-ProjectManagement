@@ -52,9 +52,21 @@ Your end goal is having DeleteMe1.txt and EditMe.txt pushed, with the other file
 
 -----
 
+## 2\. Scenario 2 | Restoring
+
+1. Navigate to the directory `Scenario2`, and run its corresonding script like you did in Scenario 1
+
+2. Run `git add --all`
+
+3. OH NO! You accidentally staged a `TestPassword.txt` file that you dont want committed to the repo. To move it back from staged (green) to unstaged (red), run `git restore --staged "thefilename"` (replace the filename)
+
+4. 
+
+-----
+
 ## 3\. Scenario 3 | gitignores
 
-1. Naviagate to the directory `Scenario3`, and run its corresonding script like you did in Scenario 1
+1. Navigate to the directory `Scenario3`, and run its corresonding script 
 
 Sometimes when you code, you get files you dont want to commit ever, but it's a huge hassle. For instance, building in some C# projects yields hundreds of build files that live around in directories all over your project. A `.gitignore` file will make git ignore any file from being added/committed
 
