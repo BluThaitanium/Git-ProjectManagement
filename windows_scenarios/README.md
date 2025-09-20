@@ -60,7 +60,10 @@ Your end goal is having DeleteMe1.txt and EditMe.txt pushed, with the other file
 
 3. OH NO! You accidentally staged a `TestPassword.txt` file that you dont want committed to the repo. To move it back from staged (green) to unstaged (red), run `git restore --staged "thefilename"` (replace the filename)
 
-4. 
+4. OH NO! You also staged my `Scenario2.ps1`, this time with changes! I want you to revert the file back to its original state found in git. To do this, unstage the staged file. Then run `git restore "thefilename"` (replace the filename
+
+5. If 
+
 
 -----
 
