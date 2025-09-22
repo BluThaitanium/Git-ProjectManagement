@@ -29,19 +29,25 @@ git config --global user.email "youremail@example.com"
 
 -----
 
-## 2\. Clone the Repository
+## 2\. Fork the Repository
 
-### a. Clone the Repo
+### a. Fork the Repo
+
+By default, you likely can't edit my repo and form your own branches directory. You need to "fork" the repo, and this is standard if you ever want to contribute to Open Source projects!
+
+It's basically like creating a deep copy of this repo, then renaming it 
+
+### b. Clone the Repo
 
 A **repository** is a project that Git tracks. To get a local copy of our example project, use the `git clone` command. This downloads the entire project history.
 
+**Note:** Please replace `<your username>/Git-ProjectManagement` with the actual path to your repository.
+
 ```bash
-git clone https://github.com/BluThaitanium/Git-ProjectManagement.git
+git clone https://github.com/<your username>/Git-ProjectManagement.git
 ```
 
-**Note:** Please replace `BluThaitanium/Git-ProjectManagement` with the actual path to your repository.
-
-### b. Navigate into the Directory
+### c. Navigate into the Directory
 
 After cloning, a new folder with the same name as the repository will be created. Use `ls` to see your current directory:
 
@@ -84,11 +90,22 @@ I want you to make your own branch. Visually it's like this:
 
 ![branches](./images/branching.png)
 
-... so as an analogy your workflow will look like this:
-1. Go to Walmart (github) and you'll see Lay's chips (this repo on main branch)
-2. Buy the chips and slap on a new brand name (your branch)
-3. Add some salt into the bag of chips (making edits, git add/commit/push)
-4. Put the bag of chips back in Walmart for others to buy (making your PR and merging back to main)
+Think of working with Git like collaborating on a research paper. Here's how the workflow maps out:
+
+1. **The Original Paper (Your Repository)**  
+   Imagine there's a published research paper — this is your GitHub repository. It contains all the original work.
+
+2. **Making Your Own Copy (Forking)**  
+   You want to contribute, so you make a personal copy of the paper in a Word Doc — this is your **fork**. Now you can edit without affecting the original.
+
+3. **Creating a Safe Workspace (Branching)**  
+   Before editing, you create a checkpoint in your Word doc — this is your **branch**. It lets you experiment freely, knowing you can always go back.
+
+4. **Editing the Paper (Add/Commit/Push)**  
+   You fix typos, improve phrasing, and make changes. Each time you save your progress, you're doing a **commit**. When you're ready to share, you **push** your changes to your online copy.
+
+5. **Submitting Your Edits (Pull Request)**  
+   You email the researchers your revised version, suggesting they incorporate your changes — this is a **pull request (PR)**. If they agree, your edits get merged into the original paper.
 
 ## 5\. Checkout
 
