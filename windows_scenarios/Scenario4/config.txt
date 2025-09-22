@@ -1,4 +1,0 @@
-# Configuration file
-server_port=8080
-debug_mode=true
-api_key=your_api_key_here
