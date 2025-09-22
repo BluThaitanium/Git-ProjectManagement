@@ -147,5 +147,13 @@ You could clean up workspaces by manually reverting files, running `git clean -x
 4. Stash them: `git stash push -m "Config approach 1"`
 5. Write different changes to the same file and add the file
 6. Stash that too: `git stash push -m "Config approach 2"`
-7. Compare both approaches using `git stash show -p` on different stashes
+7. Compare both approaches using `git stash show -p "stash@{#}` on different stashes, replacing the `#` symbol with the stash number you want from `git stash list`
+
+![Scenario4 Stash diff](../images/scenario4stashdiff.png)
+
+**Scenario C**: You want to clean your "backpack" of stashes
+
+1. Let's say your stash list gets messy in the future like mines:
+
+![Scenario4 Stash History](../images/scenario4stashlist.png)
 
