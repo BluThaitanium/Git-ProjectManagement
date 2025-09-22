@@ -137,6 +137,8 @@ You could clean up workspaces by manually reverting files, running `git clean -x
 3. Run `git stash`
 4. Running `git status` or `ls` would show that your directory looks like your main branch!
 
+This is super helpful nowadays with Agentic AI, which can make changes without your approval. As long as you have a good checkpoint and stash, you'll easily manage unwanted changes!
+
 
 **Scenario B**: You want to experiment with different approaches
 
