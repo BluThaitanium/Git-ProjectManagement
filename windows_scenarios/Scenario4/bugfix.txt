@@ -1,0 +1,5 @@
+// Bug fix for issue #123
+function fixBug() {
+    // Bug fix code here
+    console.log('Bug fixed');
+}

@@ -1,0 +1,3 @@
+// Temporary work - not ready for commit
+let tempVariable = 'testing';
+console.log('This is temporary work');
