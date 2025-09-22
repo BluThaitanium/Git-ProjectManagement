@@ -82,5 +82,9 @@ Sometimes when you code, you get files you dont want to commit ever, but it's a 
 
 2. Modify the `.gitignore` file to ignore all the IgnoreMe#.txt files. Your end goal is just seeing the DontIgnoreMe.txt files when you run `git status`. Feel free to use Bing or CoPilot to help you out. Bonus points if you write it in 1 line via regex.
 
-3. If you only see the DontIgnoreMe.txt files, you can add/commit/push
+3. This is the goal state:
+
+![Scenario3 goalstate](../images/scenario3.png)
+
+Notice how the `IgnoreMe#.txt` files still exist in the file explorer, AND it doesn't show up at all in `git status`. If you've achieved this, feel free to commit/push
 
