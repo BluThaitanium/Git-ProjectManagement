@@ -106,99 +106,46 @@ In summary, imagine that whenever you run `git stash`, you store green changes i
    - Run `git add feature.txt bugfix.txt` to stage some files
    - Modify `config.txt` by changing the port number to 9090
    - Run `git status` - you should see staged and unstaged changes
-   - Run `git stash` to stash both staged and unstaged changes
+   - Run `git stash -m "Custom Message"` to stash both staged and unstaged changes
    - Run `git status` - your working directory should be clean!
 
-4. **View Stash List**: Run `git stash list` to see your stashed changes
+4. **View Stash List**: Run `git stash list` to see stashed changes. See how your "backpack" of stashed contains one with your Custom Message message.
 
-5. **Apply Stash**: Run `git stash apply` to restore your changes (but keep them in the stash)
+5. **Apply Stash**: In the stash list, take note of the stash number. Run `git stash apply stash@{n}` to restore your changes 
+
+For example, let's say my backpack has a bunch of stashes, and I wanted to apply a stash I did a couple stashes ago, I'd do:
+
+![Scenario4 stash specific goalstate](../images/scenario4stashSpecific.png)
+
+In the end, your flow should look something like this:
 
 ![Scenario4 stash goalstate](../images/scenario4stash.png)
-
-### Part 2: Advanced Stash Operations
-
-6. **Stash with Message**: Make more changes, then run `git stash push -m "Work in progress on feature and config"`
-
-7. **Stash Untracked Files**: 
-   - Modify `untracked_file.txt`
-   - Run `git stash -u` (or `git stash --include-untracked`) to include untracked files
-   - Verify with `git status` that even untracked changes are stashed
-
-8. **Multiple Stashes**: Create several stashes with different messages:
-   - Make changes to `temp_work.txt`, then `git stash push -m "Temporary debugging code"`
-   - Make changes to `feature.txt`, then `git stash push -m "Half-finished feature implementation"`
-   - Run `git stash list` to see all your stashes
-
-### Part 3: Stash Management
-
-9. **Selective Stash Application**:
-   - Run `git stash list` to see stash indices
-   - Apply a specific stash: `git stash apply stash@{1}` (replace 1 with desired index)
-   - Check differences: `git stash show stash@{0}` (shows summary) or `git stash show -p stash@{0}` (shows full diff)
-
-10. **Stash Pop vs Apply**:
-    - Use `git stash pop` to apply the most recent stash AND remove it from stash list
-    - Use `git stash apply` to apply the stash but keep it in the stash list
-    - Practice both and observe the difference with `git stash list`
-
-11. **Partial Stashing**:
-    - Make changes to multiple files
-    - Run `git stash -p` (or `git stash --patch`) for interactive stashing
-    - Choose which hunks to stash by typing `y` (yes), `n` (no), `s` (split), etc.
-
-### Part 4: Advanced Stash Features
-
-12. **Stash Branch Creation**:
-    - Create a new branch from a stash: `git stash branch feature-branch stash@{0}`
-    - This creates a new branch, checks it out, applies the stash, and drops it
-
-13. **Stash Dropping**:
-    - Drop a specific stash: `git stash drop stash@{1}`
-    - Clear all stashes: `git stash clear` (be careful with this!)
-
-14. **Stash Show Options**:
-    - View stash summary: `git stash show`
-    - View full stash diff: `git stash show -p`
-    - View specific stash: `git stash show stash@{2}`
 
 ### Practice Scenarios
 
 Try these real-world scenarios:
 
-**Scenario A**: You're working on a feature but need to quickly fix a bug
-1. Make changes to `feature.txt`
-2. Stash your work: `git stash push -m "Feature work in progress"`
-3. Make changes to `bugfix.txt` and commit the bug fix
-4. Apply your stashed feature work: `git stash pop`
+**Scenario A**: Clean up your workspace
+
+You could clean up workspaces by manually reverting files, running `git clean -xf` (kinda dangerous), or simply by stashing them!
+
+1. Hopefully your working directory still looks messy, if not- run the Scenario4.ps1 file again
+
+![Scenario4 stash all](../images/scenario4StashAll.png)
+
+2. Add all the files
+3. Run `git stash`
+4. Running `git status` or `ls` would show that your directory looks like your main branch!
+
 
 **Scenario B**: You want to experiment with different approaches
-1. Make changes to `config.txt`
-2. Stash them: `git stash push -m "Config approach 1"`
-3. Try a different approach in the same file
-4. Stash that too: `git stash push -m "Config approach 2"`
-5. Compare both approaches using `git stash show -p` on different stashes
 
-**Scenario C**: Clean up your workspace
-1. Create multiple stashes with different changes
-2. Use `git stash list` to review them
-3. Apply the ones you want to keep working on
-4. Drop the experimental ones you no longer need
+1. Run the `Scenario4.ps1` file again if your changes have been stashed or the files no longer exist1
+2. Add, commit, push, so that your remote branch has the files
 
-### Key Git Stash Commands Reference
-
-- `git stash` or `git stash push` - Stash current changes
-- `git stash push -m "message"` - Stash with a descriptive message
-- `git stash -u` - Stash including untracked files
-- `git stash -p` - Interactive/partial stashing
-- `git stash list` - Show all stashes
-- `git stash show` - Show summary of most recent stash
-- `git stash show -p` - Show full diff of most recent stash
-- `git stash apply` - Apply most recent stash (keep in stash list)
-- `git stash apply stash@{n}` - Apply specific stash
-- `git stash pop` - Apply and remove most recent stash
-- `git stash drop stash@{n}` - Delete specific stash
-- `git stash clear` - Delete all stashes
-- `git stash branch <branch-name>` - Create branch from stash
-
-**Goal**: Master git stash to efficiently manage your work-in-progress changes!
+3. Make changes to `config.txt` (could be random text), and add the file
+4. Stash them: `git stash push -m "Config approach 1"`
+5. Write different changes to the same file and add the file
+6. Stash that too: `git stash push -m "Config approach 2"`
+7. Compare both approaches using `git stash show -p` on different stashes
 
