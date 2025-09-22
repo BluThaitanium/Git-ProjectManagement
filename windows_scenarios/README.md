@@ -94,6 +94,8 @@ Notice how the `IgnoreMe#.txt` files still exist in the file explorer, AND it do
 
 `git stash` is one of the most underrated Git tools, that even many professionals don't utilize. It temporarily saves your work without committing it. This is incredibly useful when you need to quickly switch branches, pull updates, or work on something else while your current work is incomplete. It prevents you from making the more dangerous and confusing `git reset...` or `git revert...` commands in the future.
 
+In summary, imagine that whenever you run `git stash`, you store green changes in a backpack, ready to be reapplied anytime.
+
 ### Part 1: Basic Stash Operations
 
 1. Navigate to the directory `Scenario4`, and run its corresponding script
@@ -110,6 +112,8 @@ Notice how the `IgnoreMe#.txt` files still exist in the file explorer, AND it do
 4. **View Stash List**: Run `git stash list` to see your stashed changes
 
 5. **Apply Stash**: Run `git stash apply` to restore your changes (but keep them in the stash)
+
+![Scenario4 stash goalstate](../images/scenario4stash.png)
 
 ### Part 2: Advanced Stash Operations
 
