@@ -50,6 +50,10 @@ Before continuing, make sure that `git status` no longer shows files in red/gree
 
 Your end goal is having DeleteMe1.txt and EditMe.txt pushed, with the other files still in red with git status. Sometimes while coding, you have changes you dont want to commit yet.
 
+![Scenario1 goalstate](../images/scenario1.png)
+
+Note how the `DontDeleteMe.txt` doesnt show up in `git status`, it's already committed/pushed in the repo!
+
 -----
 
 ## 2\. Scenario 2 | Restoring
