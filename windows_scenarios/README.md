@@ -157,3 +157,11 @@ You could clean up workspaces by manually reverting files, running `git clean -x
 
 ![Scenario4 Stash History](../images/scenario4stashlist.png)
 
+2. Run `git stash drop "stash@{#}` on a stash you want to remove. You'll see that it disappears:
+
+![Scenario4 Stash Del 1](../images/scenario4stashdel1.png)
+
+3. If you run `git stash clear`, all of your stashes are removed!
+
+![Scenario4 clear all](../images/scenario4clearall.png)
+
