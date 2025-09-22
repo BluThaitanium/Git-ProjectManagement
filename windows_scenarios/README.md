@@ -76,9 +76,9 @@ Then feel free to commit/push
 
 ## 3\. Scenario 3 | gitignores
 
-1. Navigate to the directory `Scenario3`, and run its corresonding script 
-
 Sometimes when you code, you get files you dont want to commit ever, but it's a huge hassle. For instance, building in some C# projects yields hundreds of build files that live around in directories all over your project. A `.gitignore` file will make git ignore any file from being added/committed
+
+1. Navigate to the directory `Scenario3`, and run its corresonding script 
 
 2. Modify the `.gitignore` file to ignore all the IgnoreMe#.txt files. Your end goal is just seeing the DontIgnoreMe.txt files when you run `git status`. Feel free to use Bing or CoPilot to help you out. Bonus points if you write it in 1 line via regex.
 
