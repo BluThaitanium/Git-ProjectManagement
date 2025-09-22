@@ -38,11 +38,15 @@ In summary, `git add ...`, `git commit ...`, `git push` with some `git status` s
 
 2. You'll see that a few files were created. Run `git status` to see them
 
-3. Delete the "DeleteMe#.txt" files
+3. Add, Commit, and Push all the changes
 
-4. Finish the math equation in "EditMe.txt"
+Before continuing, make sure that `git status` no longer shows files in red/green
 
-5. Only push the changes for DeleteMe1.txt and EditMe.txt
+1. Delete the "DeleteMe#.txt" files
+
+2. Finish the math equation in "EditMe.txt"
+
+3. Only push the changes for DeleteMe1.txt and EditMe.txt
 
 Your end goal is having DeleteMe1.txt and EditMe.txt pushed, with the other files still in red with git status. Sometimes while coding, you have changes you dont want to commit yet.
 
